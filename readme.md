@@ -1,3 +1,4 @@
+```
 docker run -d --name my-redis -p 6379:6379 redis
 
 cd poc_service_push
@@ -17,3 +18,4 @@ For high availability subscribe with retry:
 
 http://localhost/kurt.html (open up developer console and monitor messages)
 http://localhost/stina.html 
+```
