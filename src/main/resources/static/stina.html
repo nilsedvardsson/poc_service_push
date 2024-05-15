@@ -1,0 +1,23 @@
+<!DOCTYPE>
+<html>
+<head>
+    <title>SSE Test</title>
+    <meta charset="utf-8" />
+    <script>
+        var evtSource = new EventSource("subscribe/stina");
+        evtSource.onerror = function(event){
+            var txt;
+            switch( event.target.readyState ){
+                case EventSource.CONNECTING:
+                    txt = 'Reconnecting...';
+                    break;
+            }
+            console.log(txt);
+        };
+        evtSource.onmessage = function(event) {
+            console.log(event);
+        }
+    </script>
+</head>
+<body></body>
+</html>
